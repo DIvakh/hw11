@@ -12,6 +12,7 @@ const toDoList = {
     };
     this.tasks.push(task);
   },
+
   // ======== Delete Task ========
 
   delete(value) {
@@ -37,8 +38,8 @@ const toDoList = {
   stats() {
     const statistics = { inProgress: 0, completed: 0 };
     statistics.total = this.tasks.length;
-    for (i of this.tasks) {
-      !i.isComplete ? statistics.inProgress++ : statistics.completed++;
+    for (task of this.tasks) {
+      !task.isComplete ? statistics.inProgress++ : statistics.completed++;
     }
     return statistics;
   },
