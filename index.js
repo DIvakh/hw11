@@ -56,6 +56,8 @@ const toDoList = {
   },
 };
 
+// ======== Functional Check ========
+
 toDoList.add("Do a hw", "Need to do the last hw in time");
 
 toDoList.add("Go to the grocery", "Need to buy some milk");
@@ -63,10 +65,7 @@ toDoList.add("Go to work", "You have to do some work");
 
 toDoList.delete("Go to work");
 
-toDoList.edit("Do a hw", {
-  title: "Read about ES6",
-  text: "Read about Spread and Rest",
-});
+toDoList.edit("Do a hw", { title: "Time to learn", text: "Read MDN website" });
 
 console.log(toDoList.tasks);
 console.log(toDoList.stats());
