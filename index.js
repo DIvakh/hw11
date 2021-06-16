@@ -38,11 +38,7 @@ const toDoList = {
     const statistics = { inProgress: 0, completed: 0 };
     statistics.total = this.tasks.length;
     for (i of this.tasks) {
-      if (!i.isComplete) {
-        statistics.inProgress++;
-      } else {
-        statistics.completed++;
-      }
+      !i.isComplete ? statistics.inProgress++ : statistics.completed++;
     }
     return statistics;
   },
